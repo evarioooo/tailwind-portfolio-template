@@ -6,8 +6,9 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				dark: '#121212',
-				darken: '#36383C',
+				dark: '#171717',
+				darken: '#1b1b1b',
+				darkener: '#202020',
 				blue: '#005e9e',
 				bluehover: '#2876ee',
 				blue950: '#172554',
@@ -25,7 +26,7 @@ module.exports = {
 		},
 		container: {
 			center: true,
-			padding: '1rem',
+			padding: '0px',
 			screens: {
 				sm: '800px',
 				md: '1000px',

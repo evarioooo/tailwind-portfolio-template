@@ -5,352 +5,320 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assets/css/theme.compiled.css" rel="stylesheet">
-    <title>Tailwind Blog Template by evarioo</title>
+    <link href="./assets/css/all.min.css" rel="stylesheet">
+    <link href="./node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet" />
+    <title>Tailwind Portfolio Template by evarioo</title>
 </head>
 
-<!-- Wenn du die Schriftart für die gesamte Seite ändern möchtest solltest du hier ansetzen.
-Aktuell gibt es:
-1. font-nunito
-2. font-roboto -->
-
 <body class="font-nunito">
-    <div class="container mx-auto pt-6 md:pt-0" id="site-wrapper">
-        <header class="hidden md:flex h-36 justify-between items-end">
-            <div class="md:block hidden content-end ">
-                <!-- Statt eines Logos habe ich mich für die Geschwindigkeit entschieden. 
-                Trage hier deinen Namen bzw. den Namen deines Blogs ein. -->
-                <h2 class="mb-6 uppercase tracking-tight font-roboto text-white text-8xl ms-9">
-                    evarioo
-                </h2>
-            </div>
-            <div class="hidden lg:block mb-8 me-12">
-                <div class="flex justify-center items-center w-[472px] h-[80px] align-middle border-gray-600 border-2">
-                    <!-- Der Banner muss zwingend die Maße 468px x 60px haben.
-                    Standart Grösse und sollte jeder anbieten. -->
-                    <img class="object-contain object-center"
-                        src="https://media.devboard.eu/banner/banner-468x60px-animiert.gif" />
+    <div class="bg-dark shadow-[inset_0_-2px_4px_rgba(0,0,0,0.4)]">
+        <div class="container">
+            <div class="lg:h-24 py-4 grid grid-cols-2">
+                <div class="col-span-2 lg:col-span-1 ps-4 lg:ps-0 py-1">
+                    <h2 class="text-3xl font-nunito"><span class="text-orange-500">mar</span><span
+                            class="text-white">alex</span>
+                    </h2>
+                    <p class="p-0 m-0 text-sm text-white">Webentwicklung mit <span
+                            class="text-orange-500">Leidenschaft</span></p>
                 </div>
-            </div>
-        </header>
-        <!-- * bg-gradient-to-t from-blue to-bluehover -->
-        <nav class="bg-blue bg-gradient-to-t from-blue to-bluehover rounded-t-lg">
-            <div class="grid grid-cols-2 md:gap-4 gap-0">
-                <div class="col-span-2 sm:col-span-1 p-1 md:p-0">
-                    <button data-collapse-toggle="navbar-default" type="button"
-                        class="inline-flex items-center p-1 w-8 h-8 justify-center text-sm text-white rounded-sm md:hidden"
+                <div class="col-span-2 lg:col-span-1 ps-4 lg:p-0">
+
+                    <button data-collapse toggle="navbar-default" aria-controls="navbar-default"
+                        data-drawer-target="navbar-default" type="button"
+                        class="w-6 h-6 justify-center mt-3 lg:m-0 text-sm text-white rounded-sm lg:hidden"
                         aria-controls="navbar-default" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 17 14">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M1 1h15M1 7h15M1 13h15" />
                         </svg>
                     </button>
-                    <ul id="navbar-default"
-                        class="h-full mt-2 sm:mt-0 hidden md:flex text-sm flex-row sm:ms-3 font-nunito text-white">
-                        <li
-                            class="p-3 sm:p-0 hover:bg-dark hover:font-bold sm:hover:border-b-4 sm:pb-1 sm:px-2 sm:hover:border-bluehover sm:border-b-4 sm:border-transparent sm:me-4 text-shadow-sm">
-                            <a class="block h-full content-end" href="#">Startseite</a>
+                    <ul id="navbar-default" class="hidden lg:flex flex-row lg:flex-row-reverse mt-2">
+                        <li>
+                            <a id="dropdownButton" data-dropdown-toggle="dropdownMenu"
+                                class="font-semibold cursor-pointer me-4 p-3 block hover:bg-orange-500 hover:text-white rounded text-white">Startseite</a>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownMenu" class="absolute z-10 hidden divide-y divide-gray-100 shadow w-44">
+                                <ul class="text-sm mt-3 bg-dark text-white" aria-labelledby="dropdownDefaultButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-orange-500">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-orange-500">Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-orange-500">Earnings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-orange-500">Sign
+                                            out</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
-                        <li
-                            class="p-3 sm:p-0 hover:bg-dark hover:font-bold sm:hover:border-b-4 sm:pb-1 sm:px-2 sm:hover:border-bluehover sm:border-b-4 sm:border-transparent sm:me-4 text-shadow-sm">
-                            <a class="block h-full content-end" href="#">Startseite</a>
+                        <li>
+                            <a class="font-semibold me-4 p-3 block hover:bg-orange-500 hover:text-white rounded text-white"
+                                href="#">Startseite</a>
                         </li>
-                        <li
-                            class="p-3 sm:p-0 hover:bg-dark hover:font-bold sm:hover:border-b-4 sm:pb-1 sm:px-2 sm:hover:border-bluehover sm:border-b-4 sm:border-transparent sm:me-4 text-shadow-sm">
-                            <a class="block h-full content-end" href="#">Startseite</a>
-                        </li>
-                        <li
-                            class="p-3 sm:p-0 hover:bg-dark hover:font-bold sm:hover:border-b-4 sm:pb-1 sm:px-2 sm:hover:border-bluehover sm:border-b-4 sm:border-transparent sm:me-4 text-shadow-sm">
-                            <a class="block h-full content-end" href="#">Startseite</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-span-2 sm:col-span-1">
-                    <!-- Shows only on mobile first -->
-                    <h2 class="pb-2 sm:hidden ms-2 font-roboto font-bold text-white text-4xl">
-                        <a id="mobile-brand" class="" href="#">evarioo</a>
-                    </h2>
-                    <ul class="me-2 hidden md:flex flex-row-reverse">
-                        <li class="my-2 mx-1">
-                            <a href="#">
-                                <img class="drop-shadow-md hover:opacity-[0.89]"
-                                    src="./assets/images/social/linkedin.png" title="Folge mir auf Linkedin" />
-                            </a>
-                        </li>
-                        <li class="my-2 mx-1">
-                            <a href="#">
-                                <img class="drop-shadow-md hover:opacity-[0.89]"
-                                    src="./assets/images/social/linkedin.png" title="Folge mir auf Linkedin" />
-                            </a>
+                        <li>
+                            <a class="font-semibold me-4 p-3 block hover:bg-orange-500 hover:text-white rounded text-white"
+                                href="#">Startseite</a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </nav>
-        <main class="bg-white">
-            <div class="grid grid-cols-12 gap-0">
-                <div class="lg:col-span-6 col-span-12 lg:pt-3">
-                    <section id="news">
-                        <div class="border-b-4 pb-7 border-gray-300">
-                            <div id="news-header" class="h-64 relative">
-                                <div class="absolute left-4 top-4 text-center bg-black bg-opacity-40">
-                                    <span class="block font-bold text-white p-3">September <br> <span
-                                            class="font-thin">2024</span></span>
-                                </div>
-                                <div class="absolute bottom-5 left-4 text-center bg-black bg-opacity-40">
-                                    <span class="block text-2xl font-thin text-white p-3">Lorem ipsum dolor atmet
-                                        blindtext ...</span>
-                                </div>
-                                <img class="object-cover block w-full h-64" src="./assets/images/news/2.jpg">
-                            </div>
-                            <div id="news-content" class="p-4 text-sm text-gray-500 leading-6">
-                                <p>Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon
-                                    folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel
-                                    beleumundeten Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht hatte
-                                    und mit der Beute verschwinden wollte! Hatte einer seiner zahllosen Kollegen
-                                    dieselbe Idee gehabt, ihn beobachtet und abgewartet, um ihn nun um die Früchte
-                                    seiner Arbeit zu erleichtern? Oder gehörten die Schritte hinter ihm zu einem der
-                                    unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um seine Handgelenke
-                                    würde gleich zuschnappen? Er konnte die Aufforderung stehen zu bleiben schon hören.
-                                    Gehetzt sah er sich um. Plötzlich erblickte er den schmalen Durchgang. Blitzartig
-                                    drehte er sich nach rechts und verschwand zwischen den beiden Gebäuden. Beinahe wäre
-                                    er dabei über den umgestürzten Mülleimer gefallen, der mitten im Weg lag. Er
-                                    versuchte, sich in der Dunkelheit seinen Weg zu ertasten und erstarrte: Anscheinend
-                                    gab es keinen anderen Ausweg aus diesem kleinen Hof als den Durchgang, durch den er
-                                    gekommen war. Die Schritte wurden lauter und lauter, er sah eine dunkle Gestalt um
-                                    die Ecke biegen. Fieberhaft irrten seine Augen durch die nächtliche Dunkelheit und
-                                    suchten einen Ausweg. War jetzt wirklich alles vorbei</p>
-                            </div>
-                            <div class="grid grid-cols-2 gap-0 lg:gap-1">
-                                <div class="lg:col-span-1 col-span-2 text-center">
-                                    <a class="bg-blue bg-gradient-to-t from-blue to-bluehover hover:from-bluehover hover:to-blue text-shadow-sm text-sm text-white py-1 rounded-md p-3"
-                                        href="">weiterlesen ...</a>
-                                </div>
-                                <div class="lg:col-span-1 col-span-2 text-center">
-                                    <a class="text-gray-600 font-bold text-sm" href="">22 Kommentare</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-b-4 pb-7 border-gray-300">
-                            <div id="news-header" class="h-64 relative">
-                                <div class="absolute left-4 top-4 text-center bg-black bg-opacity-40">
-                                    <span class="block font-bold text-white p-3">September <br> <span
-                                            class="font-thin">2024</span></span>
-                                </div>
-                                <div class="absolute bottom-5 left-4 text-center bg-black bg-opacity-40">
-                                    <span class="block text-2xl font-thin text-white p-3">Lorem ipsum dolor atmet
-                                        blindtext ...</span>
-                                </div>
-                                <img class="object-cover block w-full h-64" src="./assets/images/news/2.jpg">
-                            </div>
-                            <div id="news-content" class="p-4 text-sm text-gray-500 leading-6">
-                                <p>Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon
-                                    folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel
-                                    beleumundeten Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht hatte
-                                    und mit der Beute verschwinden wollte! Hatte einer seiner zahllosen Kollegen
-                                    dieselbe Idee gehabt, ihn beobachtet und abgewartet, um ihn nun um die Früchte
-                                    seiner Arbeit zu erleichtern? Oder gehörten die Schritte hinter ihm zu einem der
-                                    unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um seine Handgelenke
-                                    würde gleich zuschnappen? Er konnte die Aufforderung stehen zu bleiben schon hören.
-                                    Gehetzt sah er sich um. Plötzlich erblickte er den schmalen Durchgang. Blitzartig
-                                    drehte er sich nach rechts und verschwand zwischen den beiden Gebäuden. Beinahe wäre
-                                    er dabei über den umgestürzten Mülleimer gefallen, der mitten im Weg lag. Er
-                                    versuchte, sich in der Dunkelheit seinen Weg zu ertasten und erstarrte: Anscheinend
-                                    gab es keinen anderen Ausweg aus diesem kleinen Hof als den Durchgang, durch den er
-                                    gekommen war. Die Schritte wurden lauter und lauter, er sah eine dunkle Gestalt um
-                                    die Ecke biegen. Fieberhaft irrten seine Augen durch die nächtliche Dunkelheit und
-                                    suchten einen Ausweg. War jetzt wirklich alles vorbei</p>
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-0 lg:gap-1">
-                                <div class="lg:col-span-1 col-span-2 text-center">
-                                    <a class="bg-blue bg-gradient-to-t from-blue to-bluehover hover:from-bluehover hover:to-blue text-shadow-sm text-sm text-white py-1 rounded-md p-3"
-                                        href="">weiterlesen ...</a>
-                                </div>
-                                <div class="lg:col-span-1 col-span-2 text-center">
-                                    <a class="text-gray-600 font-bold text-sm" href="">22 Kommentare</a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="border-b-4 pb-7 border-gray-300">
-                            <div id="news-header" class="h-64 relative">
-                                <div class="absolute left-4 top-4 text-center bg-black bg-opacity-40">
-                                    <span class="block font-bold text-white p-3">September <br> <span
-                                            class="font-thin">2024</span></span>
-                                </div>
-                                <div class="absolute bottom-5 left-4 text-center bg-black bg-opacity-40">
-                                    <span class="block text-2xl font-thin text-white p-3">Lorem ipsum dolor atmet
-                                        blindtext ...</span>
-                                </div>
-                                <img class="object-cover block w-full h-64" src="./assets/images/news/2.jpg">
-                            </div>
-                            <div id="news-content" class="p-4 text-sm text-gray-500 leading-6">
-                                <p>Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon
-                                    folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel
-                                    beleumundeten Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht hatte
-                                    und mit der Beute verschwinden wollte! Hatte einer seiner zahllosen Kollegen
-                                    dieselbe Idee gehabt, ihn beobachtet und abgewartet, um ihn nun um die Früchte
-                                    seiner Arbeit zu erleichtern? Oder gehörten die Schritte hinter ihm zu einem der
-                                    unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um seine Handgelenke
-                                    würde gleich zuschnappen? Er konnte die Aufforderung stehen zu bleiben schon hören.
-                                    Gehetzt sah er sich um. Plötzlich erblickte er den schmalen Durchgang. Blitzartig
-                                    drehte er sich nach rechts und verschwand zwischen den beiden Gebäuden. Beinahe wäre
-                                    er dabei über den umgestürzten Mülleimer gefallen, der mitten im Weg lag. Er
-                                    versuchte, sich in der Dunkelheit seinen Weg zu ertasten und erstarrte: Anscheinend
-                                    gab es keinen anderen Ausweg aus diesem kleinen Hof als den Durchgang, durch den er
-                                    gekommen war. Die Schritte wurden lauter und lauter, er sah eine dunkle Gestalt um
-                                    die Ecke biegen. Fieberhaft irrten seine Augen durch die nächtliche Dunkelheit und
-                                    suchten einen Ausweg. War jetzt wirklich alles vorbei</p>
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-0 lg:gap-1">
-                                <div class="lg:col-span-1 col-span-2 text-center">
-                                    <a class="bg-blue bg-gradient-to-t from-blue to-bluehover hover:from-bluehover hover:to-blue text-shadow-sm text-sm text-white py-1 rounded-md p-3"
-                                        href="">weiterlesen ...</a>
-                                </div>
-                                <div class="lg:col-span-1 col-span-2 text-center">
-                                    <a class="text-gray-600 font-bold text-sm" href="">22 Kommentare</a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <nav class="w-full block my-5 text-center" aria-label="News pagination">
-                            <ul class="inline-flex -space-x-px text-sm">
-                                <li>
-                                    <a href="#"
-                                        class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-white bg-blue border border-e-0 border-gray-400 rounded-s-lg hover:bg-bluehover hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="flex items-center justify-center px-3 h-8 leading-tight text-white bg-blue border border-gray-400 hover:bg-bluehover hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="flex items-center justify-center px-3 h-8 leading-tight text-white bg-blue border border-gray-400 hover:bg-bluehover hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="flex items-center justify-center px-3 h-8 leading-tight text-white bg-blue border border-gray-400 rounded-e-lg hover:bg-bluehover hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </section>
+        </div>
+    </div>
+    <div style="background-image: url('./assets/images/header/1.jpg')" class="hidden lg:block bg-cover">
+        <div class="container">
+            <section class="jumbotron">
+                <div class="py-4 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+                    <h1
+                        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-orange-500 md:text-5xl lg:text-6xl">
+                        We invest in the world’s potential</h1>
+                    <p class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 lg:px-48">
+                        Here at Flowbite we focus on markets where technology, innovation, and capital can unlock
+                        long-term value and drive economic growth.</p>
+                    <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+                        <a
+                            class="font-light rounded px-5 hover:bg-orange-500 cursor-pointer bg-orange-600 text-white text-sm py-4">
+                            <i class="me-1 fa-solid fa-circle-question"></i> Mehr erfahren
+                        </a>
+                    </div>
                 </div>
-                <div id="sidebar2nd" class="ps-5 bg-gray-300 lg:col-span-3 col-span-12">
-                    <section id="login">
-                        <h6 class="bg-dark mt-3 mb-3 ps-5 py-1.5 text-white uppercase font-nunito text-sm font-bold"
-                            id="widget-title">
-                            Login
-                        </h6>
-                        <div class="mb-4 pe-3 text-center" id="widget-content">
-                            <form>
-                                <input type="text"
-                                    class="w-full focus:border-3 focus:ring-blue focus:border-blue border border-gray-300 p-1 px-5 rounded-[4px] text-gray-600 text-sm"
-                                    name="email" value="name@domain.tld" />
-                                <input type="password"
-                                    class="w-full mt-2 focus:border-3 focus:ring-blue focus:border-blue border border-gray-300 p-1 px-5 rounded-[4px] text-gray-600 text-sm"
-                                    name="password" value="***********" />
-                                <div class="grid grid-cols-2 gap-1 mt-2">
-                                    <div>
-                                        <input
-                                            class="w-full bg-blue bg-gradient-to-t from-blue to-bluehover hover:from-bluehover hover:to-blue text-shadow-sm text-sm text-white py-1 rounded-md"
-                                            value="Anmelden" type="submit" />
-                                    </div>
-                                    <div>
-                                        <a class="w-full block bg-blue bg-gradient-to-t from-blue to-bluehover hover:from-bluehover hover:to-blue text-shadow-sm text-sm text-white py-1 rounded-md"
-                                            href="#">Registrieren</a>
-                                    </div>
-                                    <div class="col-span-2">
-                                        <a class="w-full block bg-red-700 text-shadow-sm hover:bg-red-600 text-sm text-white py-1 rounded-md"
-                                            href="#">Daten vergessen</a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </section>
-                </div>
-                <div id="sidebar" class="ps-5 bg-dark border-r-4 lg:col-span-3 col-span-12">
-                    <section id="pom">
-                        <h6 class="bg-white bg-gradient-to-r from-gray-400 to-white mt-3 mb-3 ps-5 py-1.5 uppercase font-nunito text-sm font-bold"
-                            id="widget-title">
-                            POM
-                        </h6>
-                        <div class="mb-4 pe-3 text-center" id="widget-content">
-                            <span class="text-sm text-gray-400">
-                                evarioo (101 Jahre, <span class="text-rose-500">männlich</span>)
-                            </span>
-                            <div class="mt-3">
-                                <img class="w-48 h-48 object-contain object-center text-center"
-                                    src="./assets/images/pom/evarioo.jpg" />
+            </section>
+        </div>
+    </div>
+    <div class="bg-white shadow-[inset_0_-2px_4px_rgba(0,0,0,0.4)]">
+        <main>
+            <div class="bg-slate-200 py-8">
+                <div class="container px-3 lg:px-0">
+                    <h4 class="uppercase text-3xl font-bold">Fähigkeiten</h4>
+                    <p class="text-xl mt-4 leading-loose">Jemand musste Josef K. verleumdet haben, denn ohne dass er
+                        etwas
+                        Böses getan
+                        hätte, wurde er eines Morgens verhaftet. »Wie ein Hund!« sagte er, es war, als sollte die Scham
+                        ihn überleben. Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte, fand er sich in
+                        seinem Bett zu einem ungeheueren Ungeziefer verwandelt.</p>
+                    <div class="mt-8 mb-8 grid grid-cols-6 gap-4">
+                        <div class="lg:col-span-2 col-span-4" id="tailwind-skills">
+                            <div class="relative grid place-items-center" id="circle-code">
+                                <i
+                                    class="absolute text-6xl top-22 left-40 text-shadow-lg font-bold fa-solid fa-code"></i>
                             </div>
                         </div>
-                    </section>
-                    <section id="partner">
-                        <h6 class="bg-white bg-gradient-to-r from-gray-400 to-white mt-3 mb-3 ps-5 py-1.5 uppercase font-nunito text-sm font-bold"
-                            id="widget-title">
-                            Partner
-                        </h6>
-                        <div class="mb-4 pe-3 text-center" id="widget-content">
-                            <ul>
-                                <li
-                                    class="[&:nth-child(n+2)]:mt-4 uppercase hover:text-blue text-gray-400 text-4xl pb-3 border-b-4 border-gray-800 font-roboto font-extrabold">
-                                    <a href="https://www.netzunity.com">netzunity</a>
-                                </li>
-                                <li
-                                    class="[&:nth-child(n+2)]:mt-4 uppercase hover:text-blue text-gray-400 text-4xl pb-3 border-b-4 border-gray-800 font-roboto font-extrabold">
-                                    <a href="https://www.evarioo.de">evarioo</a>
-                                </li>
-                                <li
-                                    class="[&:nth-child(n+2)]:mt-4 uppercase hover:text-blue text-gray-400 text-4xl pb-3 border-b-4 border-gray-800 font-roboto font-extrabold">
-                                    <a href="https://www.devboard.eu">devboard</a>
-                                </li>
-                            </ul>
+                        <div class="lg:col-span-2 col-span-4" id="tailwind-skills">
+                            <div class="relative grid place-items-center" id="circle-css">
+                                <i
+                                    class="absolute text-6xl top-22 left-40 text-shadow-lg font-bold fa-solid fa-code"></i>
+                            </div>
                         </div>
-                    </section>
+                        <div class="lg:col-span-2 col-span-4" id="tailwind-skills">
+                            <div class="relative grid place-items-center" id="circle-laravel">
+                                <i
+                                    class="absolute text-6xl top-22 left-40 text-shadow-lg font-bold fa-solid fa-code"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-dark text-white py-8">
+                <div class=" container px-3 lg:px-0">
+                    <h4 class="uppercase text-3xl font-bold">Referenzen</h4>
+                    <div class="grid grid-cols-4 mt-4 gap-7">
+                        <div class="lg:col-span-1 col-span-4">
+                            <a href="./assets/images/references/1.jpg" data-lightbox="references-1"
+                                data-title="Referenz #1">
+                                <img class="border-inherit border p-2 border-darken"
+                                    src="./assets/images/references/1.jpg" />
+                            </a>
+                        </div>
+                        <div class="lg:col-span-1 col-span-4">
+                            <a href="./assets/images/references/1.jpg" data-lightbox="references-1"
+                                data-title="Referenz #1">
+                                <img class="border-inherit border p-2 border-darken"
+                                    src="./assets/images/references/1.jpg" />
+                            </a>
+                        </div>
+                        <div class="lg:col-span-1 col-span-4">
+                            <a href="./assets/images/references/1.jpg" data-lightbox="references-1"
+                                data-title="Referenz #1">
+                                <img class="border-inherit border p-2 border-darken"
+                                    src="./assets/images/references/1.jpg" />
+                            </a>
+                        </div>
+                        <div class="lg:col-span-1 col-span-4">
+                            <a href="./assets/images/references/1.jpg" data-lightbox="references-1"
+                                data-title="Referenz #1">
+                                <img class="border-inherit border p-2 border-darken"
+                                    src="./assets/images/references/1.jpg" />
+                            </a>
+                        </div>
+                        <div class="lg:col-span-1 col-span-4">
+                            <a href="./assets/images/references/1.jpg" data-lightbox="references-1"
+                                data-title="Referenz #1">
+                                <img class="border-inherit border p-2 border-darken"
+                                    src="./assets/images/references/1.jpg" />
+                            </a>
+                        </div>
+                        <div class="lg:col-span-1 col-span-4">
+                            <a href="./assets/images/references/1.jpg" data-lightbox="references-1"
+                                data-title="Referenz #1">
+                                <img class="border-inherit border p-2 border-darken"
+                                    src="./assets/images/references/1.jpg" />
+                            </a>
+                        </div>
+                        <div class="lg:col-span-1 col-span-4">
+                            <a href="./assets/images/references/1.jpg" data-lightbox="references-1"
+                                data-title="Referenz #1">
+                                <img class="border-inherit border p-2 border-darken"
+                                    src="./assets/images/references/1.jpg" />
+                            </a>
+                        </div>
+                        <div class="lg:col-span-1 col-span-4">
+                            <a href="./assets/images/references/1.jpg" data-lightbox="references-1"
+                                data-title="Referenz #1">
+                                <img class="border-inherit border p-2 border-darken"
+                                    src="./assets/images/references/1.jpg" />
+                            </a>
+                        </div>
+                        <div class="lg:col-span-1 col-span-4">
+                            <a href="./assets/images/references/1.jpg" data-lightbox="references-1"
+                                data-title="Referenz #1">
+                                <img class="border-inherit border p-2 border-darken"
+                                    src="./assets/images/references/1.jpg" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-200 text-dark py-8">
+                <div class=" container px-3 lg:px-0">
+                    <h4 class="uppercase text-3xl font-bold">Sponsoring</h4>
+                    <p class="text-xl mt-4 leading-loose">Jemand musste Josef K. verleumdet haben, denn ohne dass er
+                        etwas
+                        Böses getan
+                        hätte, wurde er eines Morgens verhaftet. »Wie ein Hund!« sagte er, es war, als sollte die Scham
+                        ihn überleben. Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte, fand er sich in
+                        seinem Bett zu einem ungeheueren Ungeziefer verwandelt.</p>
                 </div>
             </div>
         </main>
-        <footer class="rounded-b-lg bg-dark text-xs text-gray-600 font-nunito">
-            <div class="grid grid-cols-2 gap-0 sm:gap-4">
-                <div class="p-1 sm:col-span-1 col-span-2">
-                    <p class="mt-1 font-bold">Copyright 2024 - 2025 www.evarioo.de | Alle Rechte vorbehalten</p>
-                    <p>Seite wurde aufgebaut in 0.025 Millisekunden</p>
+    </div>
+    <div class="bg-dark border-t border-darkener shadow-[inset_0_-2px_4px_rgba(0,0,0,0.4)]">
+        <div class="container">
+            <div class="lg:h-80 grid grid-cols-4 md:gap-4 gap-0 py-7">
+                <div class="col-span-4 mx-4 lg:mx-0 md:col-span-2">
+                    <section id="contact">
+                        <h5 class="text-2xl">
+                            <span class="text-orange-500">Sie haben Fragen?</span>
+                            <span class="text-white">Kontaktieren Sie mich.</span>
+                        </h5>
+                        <form class="mt-4 grid grid-cols-2 gap-2">
+                            <!-- Input type kann als email oder als text gesetzt werden. 
+                            Type email validiert vor dem Absenden das in dem input Feld auch eine E-Mail Adresse steht. -->
+                            <input type="text"
+                                class="col-span-2 lg:col-span-1 bg-darken text-gray-600 px-3 border-1 border-darkener focus:ring-orange-500 focus:border-orange-500 text-sm py-2"
+                                value="E-Mail" />
+                            <input type="text"
+                                class="col-span-2 lg:col-span-1 bg-darken text-gray-600 px-3 border-1 border-darkener focus:ring-orange-500 focus:border-orange-500 text-sm py-2"
+                                value="Name" />
+                            <textarea rows="5"
+                                class="resize-none col-span-2 bg-darken text-gray-600 px-3 border-1 border-darkener focus:ring-orange-500 focus:border-orange-500 text-sm py-2">Nachricht</textarea>
+
+                            <input type="submit" value="Absenden"
+                                class="font-bold w-full col-span-2 hover:bg-orange-500 cursor-pointer bg-orange-600 text-white text-sm py-2"
+                                name="submit">
+                        </form>
+                    </section>
                 </div>
-                <ul class="col-span-2 sm:col-span-1 flex flex-row sm:flex-row-reverse">
-                    <li class="my-1 mx-1">
-                        <a href="#">
-                            <img class="drop-shadow-md hover:opacity-[0.89]" src="./assets/images/social/linkedin.png"
-                                title="Folge mir auf Linkedin" />
-                        </a>
-                    </li>
-                    <li class="my-1 mx-1">
-                        <a href="#">
-                            <img class="drop-shadow-md hover:opacity-[0.89]" src="./assets/images/social/linkedin.png"
-                                title="Folge mir auf Linkedin" />
-                        </a>
-                    </li>
-                    <li class="my-1 mx-1">
-                        <a href="#">
-                            <img class="drop-shadow-md hover:opacity-[0.89]" src="./assets/images/social/linkedin.png"
-                                title="Folge mir auf Linkedin" />
-                        </a>
-                    </li>
-                </ul>
+                <div class="col-span-4 mt-4 md:mt-0 mx-4 md:mx-0 md:col-span-1">
+                    <section id="footer-menu">
+                        <h5 class="uppercase text-2xl">
+                            <span class="text-orange-500">Recht<span class="text-white">liches</span></span>
+                        </h5>
+                        <ul class="mt-4">
+                            <li
+                                class="mb-2 bg-darken text-white border border-darkener hover:border-white border-dashed font-bold hover:text-white hover:bg-orange-500">
+                                <a class="block py-2 px-4 hover:before:me-2 hover:before:content-['_↗']"
+                                    href="#">Kontakt</a>
+                            </li>
+                            <li
+                                class="mb-2 bg-darken text-white border border-darkener hover:border-white border-dashed font-bold hover:text-white hover:bg-orange-500">
+                                <a class="block py-2 px-4 hover:before:me-2 hover:before:content-['_↗']"
+                                    href="#">Nutzungsbestimmungen</a>
+                            </li>
+
+                            <li
+                                class="mb-2 bg-darken text-white border border-darkener hover:border-white border-dashed font-bold hover:text-white hover:bg-orange-500">
+                                <a class="block py-2 px-4 hover:before:me-2 hover:before:content-['_↗']"
+                                    href="#">Impressum</a>
+                            </li>
+
+                        </ul>
+                    </section>
+                </div>
+                <div class="col-span-4 mt-4 md:mt-0 mx-4 md:mx-0 md:col-span-1">
+                    <section id="footer-menu">
+                        <h5 class="uppercase text-2xl">
+                            <span class="text-orange-500">Recht<span class="text-white">liches</span></span>
+                        </h5>
+                        <ul class="mt-4">
+                            <li
+                                class="mb-2 bg-darken text-white border border-darkener hover:border-white border-dashed font-bold hover:text-white hover:bg-orange-500">
+                                <a class="block py-2 px-4 hover:before:me-2 hover:before:content-['_↗']"
+                                    href="#">Kontakt</a>
+                            </li>
+                            <li
+                                class="mb-2 bg-darken text-white border border-darkener hover:border-white border-dashed font-bold hover:text-white hover:bg-orange-500">
+                                <a class="block py-2 px-4 hover:before:me-2 hover:before:content-['_↗']"
+                                    href="#">Nutzungsbestimmungen</a>
+                            </li>
+
+                            <li
+                                class="mb-2 bg-darken text-white border border-darkener hover:border-white border-dashed font-bold hover:text-white hover:bg-orange-500">
+                                <a class="block py-2 px-4 hover:before:me-2 hover:before:content-['_↗']"
+                                    href="#">Impressum</a>
+                            </li>
+
+                        </ul>
+                    </section>
+                </div>
             </div>
-        </footer>
-        <div class="mt-4 mb-4 text-white text-center">
-            <!-- Bitte entferne dieses Copyright nicht. Es steckt viel Arbeit und Liebe in dieses Templates.
-                 Wenn du Interesse an einen unikat hast, kontaktiere mich bitte ;) -->
-            <span class="font-nunito text-gray-500">
-                Theme made with <img class="w-[18px] -top-[3px] mx-1 relative inline-block"
-                    src="./assets/images/heart.svg" alt=""> by
-                <a class="text-blue hover:text-bluehover" href="https://www.evarioo.de">www.evarioo.de</a>
-            </span>
         </div>
     </div>
+    <div class="bg-darken border-t border-darkener">
+        <div class="container">
+            <div class="lg:h-16 mx-4 lg:mx-0 grid grid-cols-2">
+                <div class="lg:col-span-1 col-span-2 py-5 text-gray-500">
+                    Copyright 2024 - 2025 by <a class="text-orange-500" href="https://www.evarioo.de">www.name.de</a> |
+                    Template made by <a class="text-orange-500" href="https://www.evarioo.de">evarioo.de</a>
+                </div>
+                <div class="lg:col-span-1 col-span-2 py-4">
+                    <ul class="flex flex-row-reverse">
+                        <li class="ms-2 w-8 h-8 text-center pt-1 rounded shadow-md bg-blue hover:bg-bluehover">
+                            <a class="block" href="#"><i
+                                    class="text-white text-shadow-sm fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li class="w-8 h-8 ms-2 text-center pt-1 rounded shadow-md bg-blue hover:bg-bluehover">
+                            <a class="block" href="#"><i
+                                    class="text-white text-shadow-sm fa-brands fa-x-twitter"></i></a>
+                        </li>
+                        <li class="w-8 h-8 text-center pt-1 rounded shadow-md bg-blue hover:bg-bluehover">
+                            <a class="block" href="#"><i
+                                    class="text-white text-shadow-sm fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./node_modules/jquery-circle-progress/dist/circle-progress.js"></script>
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./node_modules/lightbox2/dist/js/lightbox.min.js"></script>
+    <script src="./assets/js/theme.js"></script>
 </body>
 
-</html>
+</htm
