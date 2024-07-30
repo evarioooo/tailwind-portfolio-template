@@ -9,6 +9,8 @@ Please read the MIT license.
 
 ## Preview
 
+<a href="https://htmlpreview.github.io/?https://github.com/evarioooo/tailwind-portfolio-template/blob/main/index.html" target="_blank" rel="nofollow noopener ugc">Live preview</a>
+
 ## Credits & coyprights
 
 **Circle jquery** </br>
