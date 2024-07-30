@@ -5,7 +5,7 @@ Please read the MIT license.
 
 ## Installation
 
-``npm install``
+`npm install`
 
 ## Preview
 
@@ -18,13 +18,4 @@ https://fontawesome.com/download</br></br>
 **Lightbox2** </br>
 https://lokeshdhakar.com/projects/lightbox2/#getting-started
 
-## License
-
-MIT
-
-- free to use
-- free to edit
-- free for commercial use
-  etc ..
-
-Copyright by www.evarioo.de
+Template is made from evarioo.de and Alexander Bergmann, known as evarioo. You can use it for free but must contribute the credits to me ;)

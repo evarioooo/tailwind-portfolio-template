@@ -3903,6 +3903,10 @@ input:checked + .toggle-bg {
     display: flex;
   }
 
+  .lg\:grid {
+    display: grid;
+  }
+
   .lg\:hidden {
     display: none;
   }
