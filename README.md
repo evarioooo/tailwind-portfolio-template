@@ -1,6 +1,11 @@
 ## Hello!
 
+This template is free to use and made with tailwindcss and mutch more love :)
+Please read the MIT license.
+
 ## Installation
+
+``npm install``
 
 ## Preview
 
