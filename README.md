@@ -6,7 +6,7 @@
 
 ## Credits & coyprights
 
-**Lightbox2**
+**Lightbox2** </br>
 https://lokeshdhakar.com/projects/lightbox2/#getting-started
 
 ## License
